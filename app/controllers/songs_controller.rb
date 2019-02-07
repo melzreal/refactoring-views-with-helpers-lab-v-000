@@ -1,7 +1,8 @@
 class SongsController < ApplicationController
   def index
+    binding.pry
     @songs = Song.all
-    
+
   end
 
   def show
