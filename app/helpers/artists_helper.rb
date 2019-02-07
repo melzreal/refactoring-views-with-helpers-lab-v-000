@@ -1,13 +1,9 @@
 module ArtistsHelper
 
   def display_artist(song)
-
-    x = Song.find_by(title: song)
-    if x.artist.name
-      redirect "/'#{x.artist.id}'/show"      
-    else
-      redirect "/'#{x.id}'/edit"
-    end
+    song.artist
+       link_to song.artist_name, artist_path(song.artist)
+    link_to "Add Artist", edit_song_path(song)  
   end
 
 end
