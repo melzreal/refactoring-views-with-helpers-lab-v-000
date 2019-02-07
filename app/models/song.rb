@@ -2,7 +2,8 @@ class Song < ActiveRecord::Base
   belongs_to :artist
 
   def artist_name
-    self.artist.name unless self.artist.name.nil?
+      artist = Artist.find_by_id(self.artist_id)
+      artist.name
   end
 
   def artist_name=(name)
