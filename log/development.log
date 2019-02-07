@@ -943,3 +943,4 @@ Started GET "/songs" for 143.252.80.100 at 2019-02-07 18:04:38 +0000
 Cannot render console from 143.252.80.100! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs"
