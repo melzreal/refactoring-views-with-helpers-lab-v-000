@@ -1,12 +1,12 @@
 class SongsController < ApplicationController
   def index
     @songs = Song.all
-    @song.display_artist
+    display_artist(@song)
   end
 
   def show
     @song = Song.find(params[:id])
-    @song.display_artist
+    display_artist(@song)
   end
 
   def new
